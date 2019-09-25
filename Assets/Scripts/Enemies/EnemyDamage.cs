@@ -8,12 +8,23 @@ public class EnemyDamage : MonoBehaviour
     public float damageRate;
     public float pushBackForce;
 
+    public GameObject explostionEfffect;
+
     private float nextDamage;
+
+    private EnemyProjectile enemyProjectile;
+
+    [SerializeField]
+    private float fireRate = .5f;
+    private float nextFire;
 
     // Start is called before the first frame update
     void Start()
     {
         nextDamage = 0f;
+        enemyProjectile = GameObject.FindGameObjectWithTag("Projectile").GetComponent<EnemyProjectile>();
+
+       
     }
 
     // Update is called once per frame
@@ -29,6 +40,20 @@ public class EnemyDamage : MonoBehaviour
             PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
             playerHealth.AddDamage(enemyDamage);
             nextDamage = Time.time + damageRate;
+            if(gameObject.tag == "Projectile" && nextDamage <= Time.time)
+            {
+                if(Time.time > nextFire)
+                {
+
+                    nextFire = Time.time + fireRate;
+                    enemyProjectile.RemoveForce();
+
+                    enemyProjectile.RemoveForce();
+                    Instantiate(explostionEfffect, transform.position, Quaternion.identity);
+                    Destroy(gameObject, 2f);
+                }
+               
+            }
 
             PushBack(other.transform);
             

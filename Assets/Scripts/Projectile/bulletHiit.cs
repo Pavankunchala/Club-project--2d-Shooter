@@ -30,11 +30,14 @@ public class bulletHiit : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
+
         if(other.gameObject.layer == LayerMask.NameToLayer("Shootable"))
         {
             myPC.RemoveForce();
             Instantiate(explosionEffect, transform.position, transform.rotation);
             Destroy(gameObject);
+
 
             if(other.tag == "Enemy")
             {
