@@ -338,31 +338,92 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &297273458 stripped
+--- !u!1 &110378504
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3653095820187862837, guid: 05ae5ec1847874454afcafaade2f09ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 3653095820468358983}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &297273459
-Animator:
-  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297273458}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 110378505}
+  - component: {fileID: 110378506}
+  m_Layer: 0
+  m_Name: Robo Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &110378505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110378504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.41, y: -1.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 357398632}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &110378506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110378504}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8413b6563cf904c418bf2f82f7573e4c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162eedf629e0e44bb8ef08153e979fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  coins: 0
+  pointA: {fileID: 1131951674}
+  pointB: {fileID: 1809667043}
+--- !u!4 &357398632 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6261365635529832690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &385958816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385958817}
+  m_Layer: 0
+  m_Name: Enemy Way points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &385958817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385958816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1131951674}
+  - {fileID: 1809667043}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &505806410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f,
@@ -514,31 +575,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &812467907 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3653095819656448388, guid: 05ae5ec1847874454afcafaade2f09ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 3653095820468358983}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &812467908 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-    type: 3}
-  m_PrefabInstance: {fileID: 3653095820468358983}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &812467909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812467907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9369e3b8367d245519dd6c49de63937a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
 --- !u!1001 &833013809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -773,6 +809,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1131951672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131951674}
+  m_Layer: 0
+  m_Name: Robo Enemy (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1131951674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131951672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.41, y: -1.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 385958817}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1137266601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4200030572906388, guid: 2de1baedabb7943929149bbe5adf9040,
@@ -948,8 +1014,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 812467908}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1031,6 +1096,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1809667041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1809667043}
+  m_Layer: 0
+  m_Name: Robo Enemy (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1809667043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809667041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.18, y: -1.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 385958817}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1812727738
 GameObject:
@@ -1202,75 +1297,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba4285862658646ba8760a3b9a067fad, type: 3}
---- !u!1001 &3653095820468358983
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1510720415}
-    m_Modifications:
-    - target: {fileID: 3653095819656448388, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Robo-Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653095819656448387, guid: 05ae5ec1847874454afcafaade2f09ca,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 05ae5ec1847874454afcafaade2f09ca, type: 3}
 --- !u!1001 &4235051690215454214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1425,6 +1451,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f88a1a446f7f4949b5bd045a4bc2571, type: 3}
+--- !u!1001 &6261365635529832690
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 110378505}
+    m_Modifications:
+    - target: {fileID: 6261365635349643412, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_Name
+      value: Robo Enemy-Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585293809995, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585324368738, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585324368738, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17c306c8f75af4e23983faa97b72cd8d, type: 3}
 --- !u!1001 &6907016567278856239
 PrefabInstance:
   m_ObjectHideFlags: 0

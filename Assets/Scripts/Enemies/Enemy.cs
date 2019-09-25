@@ -2,22 +2,66 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
 
     [SerializeField]
     protected float speed;
 
+    [SerializeField]
+    protected int coins;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    protected Transform pointA, pointB;
+
+    protected Vector3 currentTarget;
+
+    protected Animator anim;
+
+    protected SpriteRenderer sprite;
+
+    public virtual void Init()
     {
-        
+        anim = GetComponentInChildren<Animator>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public virtual void Update()
     {
         
+        Movement();
     }
+
+
+    public virtual void Movement()
+    {
+        if(currentTarget == pointA.position)
+        {
+            sprite.flipX = true;
+        }
+        else if(currentTarget == pointB.position)
+        {
+            sprite.flipX = false;
+        }
+
+        if(transform.position == pointA.position)
+        {
+            currentTarget = pointB.position;
+            anim.SetTrigger("Idle");
+        }
+        else if(transform.position == pointB.position)
+        {
+            currentTarget = pointA.position;
+            anim.SetTrigger("Idle");
+        }
+
+        transform.position = Vector3.MoveTowards(transform.position, currentTarget, speed * Time.deltaTime);
+    }// Movement
+
+  
+
+   
+
+
 }
