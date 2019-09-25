@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
+public  abstract class Enemy : MonoBehaviour
 {
 
     [SerializeField]
@@ -26,9 +26,18 @@ public abstract class Enemy : MonoBehaviour
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
+    private void Start()
+    {
+        Init();
+    }
+
 
     public virtual void Update()
     {
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            return;
+        }
         
         Movement();
     }
@@ -36,16 +45,16 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Movement()
     {
-        if(currentTarget == pointA.position)
+        if (currentTarget == pointA.position)
         {
             sprite.flipX = true;
         }
-        else if(currentTarget == pointB.position)
+        else if (currentTarget == pointB.position)
         {
             sprite.flipX = false;
         }
 
-        if(transform.position == pointA.position)
+        if (transform.position == pointA.position)
         {
             currentTarget = pointB.position;
             anim.SetTrigger("Idle");

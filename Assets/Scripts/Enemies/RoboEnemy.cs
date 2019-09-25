@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class RoboEnemy : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    // use for initalization
+    public override void Init()
     {
         base.Init();
     }
-    private void Update()
-    {
-        
-    }
-
-
 }
