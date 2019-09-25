@@ -9,4 +9,15 @@ public class RoboEnemy : Enemy
     {
         base.Init();
     }
+
+    public override void Update()
+    {
+        base.Update();
+
+        if (enumHealth.currentHealth < enumHealth.fullHealth)
+        {
+            isHit = true;
+            anim.SetBool("InCombat", true);
+        }
+    }
 }

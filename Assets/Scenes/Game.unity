@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162eedf629e0e44bb8ef08153e979fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 1.5
   coins: 0
   pointA: {fileID: 1131951674}
   pointB: {fileID: 1809667043}
@@ -1654,6 +1654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1.141363
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643422, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: damageRate
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c306c8f75af4e23983faa97b72cd8d, type: 3}

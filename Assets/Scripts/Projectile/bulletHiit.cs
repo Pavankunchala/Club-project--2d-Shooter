@@ -10,6 +10,8 @@ public class bulletHiit : MonoBehaviour {
     // getting a refence
     ProjectileController myPC;
 
+   
+
     // effects
     public GameObject explosionEffect;
 
@@ -38,6 +40,7 @@ public class bulletHiit : MonoBehaviour {
             {
                 EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
                 enemyHealth.AddDamage(weaponDamage);
+               
             }
         }
     }//triggerEnter

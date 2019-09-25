@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour {
 
+    public static EnemyHealth instance;
+
     public float fullHealth;
 
     public float currentHealth;
@@ -19,10 +21,16 @@ public class EnemyHealth : MonoBehaviour {
     [SerializeField]
     private Slider enemyHealthSlider;
 
+    public bool isHit = false;
 
 
-	// Use this for initialization
-	void Start () {
+    
+
+
+
+
+    // Use this for initialization
+    void Start () {
         eneAS = GetComponent<AudioSource>();
         currentHealth = fullHealth;
         enemyHealthSlider.maxValue = fullHealth;
@@ -37,8 +45,11 @@ public class EnemyHealth : MonoBehaviour {
 
     public void AddDamage(float damage)
     {
+       
+
         enemyHealthSlider.gameObject.SetActive(true);
         currentHealth -= damage;
+       
         
         enemyHealthSlider.value = currentHealth;
         eneAS.PlayOneShot(enemClip);
