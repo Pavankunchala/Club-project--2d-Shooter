@@ -14,10 +14,6 @@ public class RoboEnemy : Enemy
     {
         base.Update();
 
-        if (enumHealth.currentHealth < enumHealth.fullHealth)
-        {
-            isHit = true;
-            anim.SetBool("InCombat", true);
-        }
+       
     }
 }

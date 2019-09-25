@@ -110,7 +110,7 @@ public  abstract class Enemy : MonoBehaviour
             isHit = true;
             anim.SetBool("InCombat", true);
         }
-        else if (distToShoot > 2.0f)
+        if (enumHealth.currentHealth < enumHealth.fullHealth  && distToShoot > 2.0f)
         {
             isHit = false;
             anim.SetBool("InCombat", false);
@@ -121,7 +121,7 @@ public  abstract class Enemy : MonoBehaviour
             isHit = false;
             anim.SetBool("InCombat", false);
         }
-        else if(isHit == true && anim.GetBool("InCombat") == true && distToShoot > 2f)
+         if(isHit == true && anim.GetBool("InCombat") == true && distToShoot > 2f)
         {
             isHit = false;
             anim.SetBool("InCombat", false);
