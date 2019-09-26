@@ -124,6 +124,7 @@ MonoBehaviour:
   pushBackForce: 0
   explostionEfffect: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1,
     type: 3}
+  fireRate: 0.5
 --- !u!1 &8274535489069241161
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,4 +205,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811f3b9f10cdc474682284a31ccaf542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 4
+  projectileSpeed: 3
+  direction: {x: 0, y: 0, z: 0}

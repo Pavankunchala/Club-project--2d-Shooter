@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class EnemyProjectile : MonoBehaviour
 {
 
-    public float projectileSpeed = 4f;
+    public float projectileSpeed = 10f;
     private Rigidbody2D myRB;
 
     public Vector3 direction;
 
     private SpriteRenderer bulletSprite;
+
 
 
     
@@ -23,25 +24,21 @@ public class EnemyProjectile : MonoBehaviour
         myRB = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         bulletSprite = GetComponentInChildren<SpriteRenderer>();
-    }
+            }
 
     // Update is called once per frame
     void Update()
     {
 
-         direction = player.transform.localPosition - transform.localPosition;
+         
 
-        if(direction.x > 0)
+        if (Enemy.instance.direction.x <0)
         {
-            bulletSprite.flipX = true;
-            myRB.AddForce(new Vector2(1, 0) * projectileSpeed, ForceMode2D.Impulse);
-
+            myRB.AddForce(new Vector2(1, 0) * -projectileSpeed , ForceMode2D.Impulse);
         }
-        else if(direction.x< 0)
+        else if(Enemy.instance.direction.x>0)
         {
-            bulletSprite.flipX = false;
-            myRB.AddForce(new Vector2(-1, 0) * projectileSpeed, ForceMode2D.Impulse);
-          
+            myRB.AddForce(new Vector2(1, 0) * projectileSpeed, ForceMode2D.Impulse);
         }
     }
 

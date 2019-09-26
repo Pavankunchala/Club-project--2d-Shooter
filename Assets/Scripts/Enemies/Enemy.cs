@@ -28,6 +28,17 @@ public  abstract class Enemy : MonoBehaviour
     public bool isHit = false;
 
 
+    [SerializeField]
+    public Vector3 direction;
+
+    // for firing a bullet from the enemy
+
+    protected float nextFire;
+    [SerializeField]
+    protected float fireRate;
+
+
+
     // enemy Health Scrpit
 
    protected EnemyHealth enumHealth;
@@ -135,16 +146,9 @@ public  abstract class Enemy : MonoBehaviour
 
         distToShoot = Vector3.Distance(transform.localPosition, player.transform.localPosition);
 
-        Vector3 direction = player.transform.localPosition - transform.localPosition;
+        direction = player.transform.localPosition - transform.localPosition;
 
-        if (direction.x > 0 && anim.GetBool("InCombat") == true)
-        {
-            sprite.flipX = false;
-        }
-        if (direction.x < 0 && anim.GetBool("InCombat") == true)
-        {
-            sprite.flipX = true;
-        }
+      
 
         if (distToShoot > 2.0f)
         {

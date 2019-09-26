@@ -16,9 +16,24 @@ public class RoboEnemy : Enemy
     {
         base.Update();
 
-       if(anim.GetBool("InCombat") == true)
+        if (anim.GetBool("InCombat") == true)
         {
-            Instantiate(bullet, transform.position,Quaternion.identity);
+            if (Time.time > nextFire)
+            {
+
+                // this way we can give gaps betweem the fires
+                nextFire = Time.time + fireRate;
+                if(direction.x >0)
+                {
+                    Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                }
+                else if(direction.x <0)
+                {
+                    Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 180f)));
+                }
+
+
+            }
         }
     }
 }

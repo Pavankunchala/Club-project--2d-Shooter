@@ -388,6 +388,8 @@ MonoBehaviour:
   pointB: {fileID: 1809667043}
   distToShoot: 0
   isHit: 0
+  direction: {x: 0, y: 0, z: 0}
+  fireRate: 4
   bullet: {fileID: 8274535489069241161, guid: 9efff9f5933874c42a443e0e22eed27c, type: 3}
 --- !u!4 &357398632 stripped
 Transform:

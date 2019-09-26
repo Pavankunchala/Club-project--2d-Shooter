@@ -40,20 +40,7 @@ public class EnemyDamage : MonoBehaviour
             PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
             playerHealth.AddDamage(enemyDamage);
             nextDamage = Time.time + damageRate;
-            if(gameObject.tag == "Projectile" && nextDamage <= Time.time)
-            {
-                if(Time.time > nextFire)
-                {
-
-                    nextFire = Time.time + fireRate;
-                    enemyProjectile.RemoveForce();
-
-                    enemyProjectile.RemoveForce();
-                    Instantiate(explostionEfffect, transform.position, Quaternion.identity);
-                    Destroy(gameObject, 2f);
-                }
-               
-            }
+           
 
             PushBack(other.transform);
             
