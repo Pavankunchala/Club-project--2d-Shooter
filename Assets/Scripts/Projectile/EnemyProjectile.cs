@@ -12,6 +12,8 @@ public class EnemyProjectile : MonoBehaviour
     public Vector3 direction;
 
     private SpriteRenderer bulletSprite;
+
+
     
 
     private PlayerController player;
