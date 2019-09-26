@@ -12,7 +12,6 @@ public class EnemyDamage : MonoBehaviour
 
     private float nextDamage;
 
-    private EnemyProjectile enemyProjectile;
 
     [SerializeField]
     private float fireRate = .5f;
@@ -22,8 +21,7 @@ public class EnemyDamage : MonoBehaviour
     void Start()
     {
         nextDamage = 0f;
-        enemyProjectile = GameObject.FindGameObjectWithTag("Projectile").GetComponent<EnemyProjectile>();
-
+        
        
     }
 
@@ -40,7 +38,9 @@ public class EnemyDamage : MonoBehaviour
             PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
             playerHealth.AddDamage(enemyDamage);
             nextDamage = Time.time + damageRate;
-           
+
+          
+            Instantiate(explostionEfffect, transform.position, Quaternion.identity);
 
             PushBack(other.transform);
             

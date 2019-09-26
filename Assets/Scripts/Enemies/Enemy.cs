@@ -116,23 +116,23 @@ public  abstract class Enemy : MonoBehaviour
 
     private void Direction()
     {
-        if (enumHealth.currentHealth < enumHealth.fullHealth && distToShoot < 2.0f)
+        if (enumHealth.currentHealth < enumHealth.fullHealth && distToShoot < 4.0f)
         {
             isHit = true;
             anim.SetBool("InCombat", true);
         }
-        if (enumHealth.currentHealth < enumHealth.fullHealth  && distToShoot > 2.0f)
+        if (enumHealth.currentHealth < enumHealth.fullHealth  && distToShoot > 4.0f)
         {
             isHit = false;
             anim.SetBool("InCombat", false);
         }
 
-        if(isHit == true && distToShoot > 2.0f)
+        if(isHit == true && distToShoot > 4.0f)
         {
             isHit = false;
             anim.SetBool("InCombat", false);
         }
-         if(isHit == true && anim.GetBool("InCombat") == true && distToShoot > 2f)
+         if(isHit == true && anim.GetBool("InCombat") == true && distToShoot > 4f)
         {
             isHit = false;
             anim.SetBool("InCombat", false);
@@ -150,7 +150,7 @@ public  abstract class Enemy : MonoBehaviour
 
       
 
-        if (distToShoot > 2.0f)
+        if (distToShoot > 4.0f)
         {
             isHit = false;
             anim.SetBool("InCombat", false);

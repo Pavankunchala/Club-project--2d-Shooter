@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyProjectile : MonoBehaviour
 {
 
-    public float projectileSpeed = 10f;
+    public float projectileSpeed = .5f;
     private Rigidbody2D myRB;
 
     public Vector3 direction;
@@ -35,10 +35,21 @@ public class EnemyProjectile : MonoBehaviour
         if (Enemy.instance.direction.x <0)
         {
             myRB.AddForce(new Vector2(1, 0) * -projectileSpeed , ForceMode2D.Impulse);
+            bulletSprite.flipX = true;
         }
         else if(Enemy.instance.direction.x>0)
         {
             myRB.AddForce(new Vector2(1, 0) * projectileSpeed, ForceMode2D.Impulse);
+            bulletSprite.flipX = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {
+            RemoveForce();
+            Destroy(gameObject);
         }
     }
 

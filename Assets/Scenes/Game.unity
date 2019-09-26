@@ -1601,17 +1601,17 @@ PrefabInstance:
     - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
         type: 3}
@@ -1667,6 +1667,11 @@ PrefabInstance:
         type: 3}
       propertyPath: damageRate
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643416, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: fullHealth
+      value: 14.58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c306c8f75af4e23983faa97b72cd8d, type: 3}
