@@ -319,6 +319,7 @@ Transform:
   m_Children:
   - {fileID: 505806410}
   - {fileID: 963093634}
+  - {fileID: 1768199165}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -818,9 +819,64 @@ Transform:
   m_Children:
   - {fileID: 1131951674}
   - {fileID: 1809667043}
+  - {fileID: 844992981}
+  - {fileID: 1027107248}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &409093640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 409093641}
+  - component: {fileID: 409093642}
+  m_Layer: 9
+  m_Name: Robo Enemy (1)
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &409093641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409093640}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.29, y: -1.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1120760900}
+  m_Father: {fileID: 1510720415}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &409093642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409093640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162eedf629e0e44bb8ef08153e979fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  coins: 0
+  pointA: {fileID: 844992981}
+  pointB: {fileID: 1027107248}
+  distToShoot: 0
+  isHit: 0
+  direction: {x: 0, y: 0, z: 0}
+  fireRate: 2
+  bullet: {fileID: 8274535489069241161, guid: 9efff9f5933874c42a443e0e22eed27c, type: 3}
 --- !u!4 &505806410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f,
@@ -1038,6 +1094,56 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 833013811, guid: 2de1baedabb7943929149bbe5adf9040, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2de1baedabb7943929149bbe5adf9040, type: 3}
+--- !u!1 &833013810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1327544928933158, guid: 2de1baedabb7943929149bbe5adf9040,
+    type: 3}
+  m_PrefabInstance: {fileID: 833013809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &833013811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833013810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e0c831905d241caa1f28ea226ca394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XP: 0
+  currentLevel: 0
+--- !u!1 &844992980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 844992981}
+  m_Layer: 0
+  m_Name: Robo Enemy (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &844992981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844992980}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.29, y: -1.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 385958817}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &888276109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 533158278532163501, guid: ba4285862658646ba8760a3b9a067fad,
@@ -1100,6 +1206,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 963093633}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1027107247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1027107248}
+  m_Layer: 0
+  m_Name: Robo Enemy (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1027107248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027107247}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.41, y: -1.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 385958817}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031286399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,6 +1341,116 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1120760899
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 409093641}
+    m_Modifications:
+    - target: {fileID: 6261365635349643412, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_Name
+      value: Robo Enemy-Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585293809995, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585324368738, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585324368738, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585293809994, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585293809994, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585293809994, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.383
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791574585293809994, guid: 17c306c8f75af4e23983faa97b72cd8d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.092
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17c306c8f75af4e23983faa97b72cd8d, type: 3}
+--- !u!4 &1120760900 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6261365635349643418, guid: 17c306c8f75af4e23983faa97b72cd8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1120760899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1131951672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,7 +1682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1452077529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1546,6 +1792,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 110378505}
+  - {fileID: 409093641}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6400,7 +6647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1646577028
 Transform:
   m_ObjectHideFlags: 0
@@ -6429,13 +6676,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 15234461}
   sentences:
-  - 'Hey: Do you know I am your new hero in yello'
-  - 'I am The Robo '
-  - I fought Creatureas
-  - I know the text is dumb
-  - blame the developer
+  - Where the hell Am I ?
+  - 'Oh Great Developer what kind of hell hole did you put me in '
+  - I am deeply disappointed in your desginnig skills!!
+  - 'You need a better team for desgining '
+  - and i look crappy too
   typingSpeed: 0.02
   continueButton: {fileID: 300480082}
+--- !u!1001 &1768199164
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 84902749}
+    m_Modifications:
+    - target: {fileID: 1068527910566456, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+      propertyPath: m_Name
+      value: Long Platform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212257405828925022, guid: 95ded25cc430347dba6b86f1fdd0341f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 95ded25cc430347dba6b86f1fdd0341f, type: 3}
+--- !u!4 &1768199165 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4935455606024618, guid: 95ded25cc430347dba6b86f1fdd0341f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1768199164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1809667041
 GameObject:
   m_ObjectHideFlags: 0
