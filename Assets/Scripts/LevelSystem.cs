@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class LevelSystem : MonoBehaviour
 {
+
+    public static LevelSystem instance;
+
     public int XP;
     public int currentLevel;
 
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +39,10 @@ public class LevelSystem : MonoBehaviour
         if( ourLvl != currentLevel)
         {
             currentLevel = ourLvl;
-            //you
+            //you have leveled up
+            Debug.Log("You have leveld up");
+            PlayerHealth.instance.MaxHealth += .25f;
+            PlayerHealth.instance.currentHealth = PlayerHealth.instance.MaxHealth;
         }
 
         int xpNxtLevel = 100 * (currentLevel + 1) * (currentLevel + 1);

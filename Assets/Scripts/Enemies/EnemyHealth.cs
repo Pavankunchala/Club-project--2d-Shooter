@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour {
     [SerializeField]
     private Slider enemyHealthSlider;
 
-    public bool isHit = false;
+    public bool isDead = false;
 
 
     
@@ -56,7 +56,9 @@ public class EnemyHealth : MonoBehaviour {
 
         if(currentHealth<= 0)
         {
-            
+            isDead = true;
+            LevelSystem.instance.UpdateXP(50);
+
             Destroy(gameObject);
             Instantiate(exploEffect, transform.position, Quaternion.identity);
         }

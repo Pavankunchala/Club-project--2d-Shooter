@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
+    public static PlayerHealth instance;
+
     public float MaxHealth;
     public float currentHealth;
 
@@ -21,7 +23,15 @@ public class PlayerHealth : MonoBehaviour
 
     float smoothColor = 5f;
 
-    
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
