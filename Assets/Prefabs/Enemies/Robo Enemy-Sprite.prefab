@@ -129,7 +129,7 @@ MonoBehaviour:
   exploEffect: {fileID: 1247311384876784, guid: 4adffb0018aeda44e9263f901167af1f,
     type: 3}
   enemyHealthSlider: {fileID: 7791574585293809997}
-  isHit: 0
+  isDead: 0
 --- !u!95 &6261365635349643417
 Animator:
   serializedVersion: 3
@@ -164,7 +164,8 @@ MonoBehaviour:
   enemyDamage: 4
   damageRate: 10
   pushBackForce: 4
-  explostionEfffect: {fileID: 0}
+  explostionEfffect: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1,
+    type: 3}
   fireRate: 0.5
 --- !u!82 &909622274
 AudioSource:
@@ -392,12 +393,32 @@ PrefabInstance:
     - target: {fileID: 4235051688851245885, guid: 1f88a1a446f7f4949b5bd045a4bc2571,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.02
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235051688851245885, guid: 1f88a1a446f7f4949b5bd045a4bc2571,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 4235051688851245885, guid: 1f88a1a446f7f4949b5bd045a4bc2571,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.41
+      value: 0.092
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235051688851245885, guid: 1f88a1a446f7f4949b5bd045a4bc2571,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.383
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235051688814956821, guid: 1f88a1a446f7f4949b5bd045a4bc2571,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235051688814956821, guid: 1f88a1a446f7f4949b5bd045a4bc2571,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f88a1a446f7f4949b5bd045a4bc2571, type: 3}

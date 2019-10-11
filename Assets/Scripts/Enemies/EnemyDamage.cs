@@ -8,7 +8,7 @@ public class EnemyDamage : MonoBehaviour
     public float damageRate;
     public float pushBackForce;
 
-    public GameObject explostionEfffect;
+    //public GameObject explostionEfffect;
 
     private float nextDamage;
 
@@ -39,8 +39,8 @@ public class EnemyDamage : MonoBehaviour
             playerHealth.AddDamage(enemyDamage);
             nextDamage = Time.time + damageRate;
 
-          
-            Instantiate(explostionEfffect, transform.position, Quaternion.identity);
+
+            //Instantiate(explostionEfffect, transform.position, Quaternion.identity);
 
             PushBack(other.transform);
             

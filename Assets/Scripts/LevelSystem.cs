@@ -10,10 +10,12 @@ public class LevelSystem : MonoBehaviour
     public int XP;
     public int currentLevel;
 
+    PlayerHealth playerHealth;
+
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -23,12 +25,13 @@ public class LevelSystem : MonoBehaviour
     void Start()
     {
         UpdateXP(0);
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void UpdateXP(int exp)
@@ -36,18 +39,20 @@ public class LevelSystem : MonoBehaviour
         XP += exp;
         int ourLvl = (int)(0.1f * Mathf.Sqrt(XP));
 
-        if( ourLvl != currentLevel)
+        if (ourLvl != currentLevel)
         {
             currentLevel = ourLvl;
             //you have leveled up
             Debug.Log("You have leveld up");
-            PlayerHealth.instance.MaxHealth += .25f;
-            PlayerHealth.instance.currentHealth = PlayerHealth.instance.MaxHealth;
+            playerHealth.MaxHealth += .25f;
+            playerHealth.currentHealth = playerHealth.MaxHealth;
+            playerHealth.playerHealthSlider.value = playerHealth.currentHealth;
+
+
+            int xpNxtLevel = 100 * (currentLevel + 1) * (currentLevel + 1);
+            int differenceXp = xpNxtLevel - XP;
+
+            int totalDifference = xpNxtLevel - (100 * currentLevel * currentLevel);
         }
-
-        int xpNxtLevel = 100 * (currentLevel + 1) * (currentLevel + 1);
-        int differenceXp = xpNxtLevel - XP;
-
-        int totalDifference = xpNxtLevel - (100 * currentLevel * currentLevel);
     }
 }

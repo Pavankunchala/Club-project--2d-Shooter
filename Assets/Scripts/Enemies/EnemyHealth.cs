@@ -59,7 +59,7 @@ public class EnemyHealth : MonoBehaviour {
             isDead = true;
             LevelSystem.instance.UpdateXP(50);
 
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
             Instantiate(exploEffect, transform.position, Quaternion.identity);
         }
     }
