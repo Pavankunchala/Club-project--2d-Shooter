@@ -23,6 +23,8 @@ public class EnemyHealth : MonoBehaviour {
 
     public bool isDead = false;
 
+    //public GameObject damagePopUpText;
+
 
     
 
@@ -45,7 +47,7 @@ public class EnemyHealth : MonoBehaviour {
 
     public void AddDamage(float damage)
     {
-       
+      
 
         enemyHealthSlider.gameObject.SetActive(true);
         currentHealth -= damage;
@@ -54,11 +56,13 @@ public class EnemyHealth : MonoBehaviour {
         enemyHealthSlider.value = currentHealth;
         eneAS.PlayOneShot(enemClip);
 
-        if(currentHealth<= 0)
+        //DamagePopUp.Create(transform.position, 100);
+
+        if (currentHealth<= 0)
         {
             isDead = true;
             LevelSystem.instance.UpdateXP(50);
-
+            //DamagePopUp.Create(transform.position, 100);
             Destroy(transform.parent.gameObject);
             Instantiate(exploEffect, transform.position, Quaternion.identity);
         }

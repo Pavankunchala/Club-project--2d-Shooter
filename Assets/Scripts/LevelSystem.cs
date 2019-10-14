@@ -13,6 +13,12 @@ public class LevelSystem : MonoBehaviour
     PlayerHealth playerHealth;
 
 
+    public GameObject levelUpEffect;
+
+    [SerializeField]
+    private Transform leveleffectTranform;
+
+
     private void Awake()
     {
         if (instance == null)
@@ -48,6 +54,9 @@ public class LevelSystem : MonoBehaviour
             playerHealth.currentHealth = playerHealth.MaxHealth;
             playerHealth.playerHealthSlider.value = playerHealth.currentHealth;
 
+            Instantiate(levelUpEffect, leveleffectTranform.position, leveleffectTranform.rotation);
+
+            //Destroy(levelUpEffect, 1f);
 
             int xpNxtLevel = 100 * (currentLevel + 1) * (currentLevel + 1);
             int differenceXp = xpNxtLevel - XP;

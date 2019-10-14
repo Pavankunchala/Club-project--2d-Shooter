@@ -23,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
 
     float smoothColor = 5f;
 
+    public GameObject damagePopUpText;
+
 
     private void Awake()
     {
